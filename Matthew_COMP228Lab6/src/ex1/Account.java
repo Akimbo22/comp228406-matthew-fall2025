@@ -36,7 +36,7 @@ public class Account implements Runnable {
                 System.out.printf("Bank will withdraw $%f from account total: $%f \n",
                         withdraw, bankTotal);
                 bankTotal -= withdraw;
-                System.out.printf("New total after withdrawal is: $%f \n");
+                System.out.printf("New total after withdrawal is: $%f \n", bankTotal);
             }
             Thread.sleep(bankSleep);
         } catch (InterruptedException exception)
