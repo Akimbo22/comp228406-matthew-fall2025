@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.opsdevelop.ex1.HelloController"
+            prefWidth="960" prefHeight="1000">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <top>
+        <HBox spacing="10" styleClass="p-3 bg-light border-bottom">
+            <Label text="🎮 Game Recording Application" styleClass="h4 m-0"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+        </HBox>
+    </top>
+
+
+    <center>
+        <HBox spacing="16" styleClass="p-3">
+
+            <VBox spacing="10" styleClass="card p-4" HBox.hgrow="NEVER" prefWidth="360">
+                <Label text="Game ID:" styleClass="fw-bold"/>
+                <TextField fx:id="gameIDField" promptText="e.g., 123456789" styleClass="form-control"/>
+
+                <Label text="Game Title:" styleClass="fw-bold"/>
+                <TextField fx:id="gameTitleField" promptText="e.g., The Hundred Line -Last Defense Academy-" styleClass="form-control"/>
+
+                <Label text="Player ID:" styleClass="fw-bold"/>
+                <TextField fx:id="playerIDField" promptText="e.g., 987654321" styleClass="form-control"/>
+
+                <Label text="First Name:" styleClass="fw-bold"/>
+                <TextField fx:id="firstNameField" promptText="e.g., John" styleClass="form-control"/>
+
+                <Label text="Last Name:" styleClass="fw-bold"/>
+                <TextField fx:id="lastNameField" promptText="e.g., Doe" styleClass="form-control"/>
+
+                <Label text="Address:" styleClass="fw-bold"/>
+                <TextField fx:id="addressField" promptText="e.g., 124 Conch Street" styleClass="form-control"/>
+
+                <Label text="Postal Code:" styleClass="fw-bold"/>
+                <TextField fx:id="postalField" promptText="e.g., 11O37" styleClass="form-control"/>
+
+                <Label text="Province:" styleClass="fw-bold"/>
+                <TextField fx:id="provinceField" promptText="e.g., Ontario" styleClass="form-control"/>
+
+                <Label text="Phone Number:" styleClass="fw-bold"/>
+                <TextField fx:id="phoneField" promptText="e.g., 8005551075" styleClass="form-control"/>
+
+                <Label text="Player-Game ID:" styleClass="fw-bold"/>
+                <TextField fx:id="playerGameIDField" promptText="e.g., 246813579" styleClass="form-control"/>
+
+                <Label text="Play Date:" styleClass="fw-bold"/>
+                <TextField fx:id="dateField" promptText="e.g., September 25, 2025" styleClass="form-control"/>
+
+                <Label text="Score:" styleClass="fw-bold"/>
+                <TextField fx:id="scoreField" promptText="e.g., 100" styleClass="form-control"/>
+
+                <HBox spacing="8" styleClass="pt-2">
+                    <Button fx:id="submitButton" text="Submit" styleClass="btn btn-primary"/>
+                    <Button text="Clear" onAction="#handleClear" styleClass="btn btn-outline-secondary"/>
+                </HBox>
+            </VBox>
+
+            <!-- Table Card -->
+            <VBox spacing="10" styleClass="card p-3" HBox.hgrow="ALWAYS">
+                <TableView fx:id="recordTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="gameIDColumn" text="Game ID" prefWidth="180"/>
+                        <TableColumn fx:id="gameTitleColumn" text="Game" prefWidth="180"/>
+                        <TableColumn fx:id="playerIDColumn" text="Player ID" prefWidth="180"/>
+                        <TableColumn fx:id="firstNameColumn" text="First Name" prefWidth="180"/>
+                        <TableColumn fx:id="lastNameColumn" text="Last Name" prefWidth="180"/>
+                        <TableColumn fx:id="addressColumn" text="Address" prefWidth="180"/>
+                        <TableColumn fx:id="postalColumn" text="Postal Code" prefWidth="180"/>
+                        <TableColumn fx:id="provinceColumn" text="Province" prefWidth="180"/>
+                        <TableColumn fx:id="phoneColumn" text="Phone Number" prefWidth="180"/>
+                        <TableColumn fx:id="playerGameIDColumn" text="Player-Game ID" prefWidth="180"/>
+                        <TableColumn fx:id="dateColumn" text="Play Date" prefWidth="180"/>
+                        <TableColumn fx:id="scoreColumn" text="Score" prefWidth="180"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>
